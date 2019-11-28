@@ -4,4 +4,4 @@ The implementation is in single header file `ch.hpp`.
 
 The file `test.cpp` contains a simple example of usage.
 
-<img src="https://i.imgur.com/hF5TZUj.gifv" width="50%">
+<img src="https://i.imgur.com/hF5TZUj.gif" width="55%">
