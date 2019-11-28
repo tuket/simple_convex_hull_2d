@@ -4,31 +4,32 @@
 
 // input: a cloud of points
 // output: the convex hull polygon (as a sequence of indices of the points)
-std::vector<int> convexHull(const std::vector<P>& p);
 
 struct P { int x, y; };
 
-P operator+(P a, P b) {
+std::vector<int> convexHull(const std::vector<P>& p);
+
+static P operator+(P a, P b) {
 	return {a.x + b.x, a.y + b.y}; 
 }
 
-P operator-(P a, P b) {
+static P operator-(P a, P b) {
 	return {a.x - b.x, a.y - b.y};
 }
 
-bool operator==(P a, P b) {
+static bool operator==(P a, P b) {
 	return a.x == b.x && a.y == b.y;
 }
 
-int dot(P v1, P v2) {
+static int dot(P v1, P v2) {
 	return v1.x*v2.x + v1.y*v2.y;
 }
 
-int len2(P p) {
+static int len2(P p) {
 	return p.x*p.x + p.y*p.y;
 }
 
-int leftOrRight(P v1, P v2) // right: -, left: +
+static int leftOrRight(P v1, P v2) // right: -, left: +
 {
 	P v90 = {-v1.y, v1.x};
 	return dot(v90, v2);
