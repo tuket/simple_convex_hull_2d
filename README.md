@@ -4,4 +4,4 @@ The implementation is in single header file `ch.hpp`.
 
 The file `test.cpp` contains a simple example of usage.
 
-![gif](ch.gif)
+![gif](ch.gif | width=450)
