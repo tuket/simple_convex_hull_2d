@@ -2,6 +2,10 @@
 
 #include <vector>
 
+// input: a cloud of points
+// output: the convex hull polygon (as a sequence of indices of the points)
+std::vector<int> convexHull(const std::vector<P>& p);
+
 struct P { int x, y; };
 
 P operator+(P a, P b) {
@@ -30,8 +34,7 @@ int leftOrRight(P v1, P v2) // right: -, left: +
 	return dot(v90, v2);
 }
 
-// input: a cloud of points
-// output: the convex hull polygon (as a sequence of indices of the points)
+#ifdef SIMPLE_CONVEX_HULL_2D_IMPL
 std::vector<int> convexHull(const std::vector<P>& p)
 {
 	const int n = p.size();
@@ -76,3 +79,5 @@ std::vector<int> convexHull(const std::vector<P>& p)
 
 	return poly;
 }
+
+#endif //SIMPLE_CONVEX_HULL_2D_IMPL

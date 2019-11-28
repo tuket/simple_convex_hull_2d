@@ -1,6 +1,9 @@
 // TEST WITH SFML
+// g++ test.cpp -o test -lsfml-graphics -lsfml-window -lsfml-system
 // ----------------------------------------------------------------------
 #include <SFML/Graphics.hpp>
+
+#define SIMPLE_CONVEX_HULL_2D_IMPL
 #include "ch.hpp"
 
 int main()
